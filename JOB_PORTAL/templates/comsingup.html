@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block title %}Comsingup{% endblock title %}
+{% block body %}  
+<div class="text text-center py-3 px-0">
+<h3>Company Singup</h3></div>
+    <div class="container text-center   py-0 my-0 ">
+        <img src="/static/img/13.png  " width="300" height="200">
+    </div>
+   
+    <form method="post" action="/comsingup" >
+         {% csrf_token %}
+        {{ form }}
+    <div class="cantainer py-0 px-5 mx-5 my-3">
+     
+  <div class="form-group">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder=name@example.com">
+  </div>
+         <div class="form-group">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" class="form-control" id="password" placeholder="@aA1245g3fg" name="password">
+  </div>
+  <div class="form-group">
+    <label for="Companyname" class="form-label">Company_Name</label>
+    <input type="text" class="form-control" id="companyname" placeholder="Iqbal multinational company" name="companyname">
+  </div>
+         <div class="form-group">
+    <label for="tradelicense" class="form-label">Trade_License </label>
+    <input type="text" class="form-control" id="tradelicense" name="tradelicense" placeholder="20201097940">
+  </div>
+  <div class="form-group">
+    <label for="address" class="form-label">Company_Address </label>
+    <input type="text" class="form-control" id="address" placeholder=" Dhaka Uttora"name="address">
+  </div>
+         <div class="form-group">
+    <label for="phone" class="form-label">Phone_number </label>
+    <input type="phone" class="form-control" id="phone" name="phone" placeholder="+880">
+  </div>
+  <div class="form-group">
+    <label for="city" class="form-label" >City</label>
+    <select id="city" class="form-select" name="city">
+      <option selected>Choose...</option>
+      <option>Dhaka</option>
+        <option>Khulna</option>
+         <option>Barisal</option>
+         <option>Chattogram</option>
+        <option>Khulna</option>
+         <option>Rajshahi</option>
+         <option>Sylhet</option>
+        <option>Mymensingh</option>
+    </select>
+      <div class="form-group px-0 my-3">
+    <button type="submit" class="btn btn-primary">Submit From</button>
+  </div>
+  </div>
+  
+     </form>
+</div>
+  
+     
+
+
+{% endblock body%}
